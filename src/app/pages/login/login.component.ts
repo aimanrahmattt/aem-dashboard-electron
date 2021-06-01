@@ -59,8 +59,6 @@ export class LoginComponent implements OnInit {
       let result = records.docs;
 
       if(result.length > 0) {
-        console.log("h", result);
-        
         if (this.loginRequest.username != result[0].email && this.loginRequest.password != result[0].password) {
           this.spinner.hide();
           this.loginError = true;
